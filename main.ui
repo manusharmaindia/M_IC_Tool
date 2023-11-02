@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>683</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PDF Viewer with Toolbar</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1071</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpenPDF"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionShowHideToolbar"/>
+    <addaction name="actionShowContinuousPages"/>
+    <addaction name="actionSearch"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuConvertTo">
+     <property name="title">
+      <string>Convert to</string>
+     </property>
+     <addaction name="actionTextFile"/>
+    </widget>
+    <addaction name="actionMergeUnmerge"/>
+    <addaction name="separator"/>
+    <addaction name="menuConvertTo"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionOpenSettingsFile"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="PDFViewerToolbar">
+   <property name="windowTitle">
+    <string>PDFViewerToolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPreviousPage"/>
+   <addaction name="actionNextPage"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+   <addaction name="separator"/>
+   <addaction name="actionRotatePageClockwise"/>
+   <addaction name="actionRotatePageAntiClockwise"/>
+   <addaction name="separator"/>
+   <addaction name="actionSearchPDF"/>
+  </widget>
+  <widget class="QToolBar" name="PDFViewerToolbar_2">
+   <property name="windowTitle">
+    <string>PDFViewerToolbar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionOpenPDF">
+   <property name="text">
+    <string>Open PDF</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSearch">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/search-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionNavigationbar">
+   <property name="text">
+    <string>Navigationbar</string>
+   </property>
+  </action>
+  <action name="actionEditbar">
+   <property name="text">
+    <string>Editbar</string>
+   </property>
+  </action>
+  <action name="actionMergeUnmerge">
+   <property name="text">
+    <string>Merge / Unmerge</string>
+   </property>
+  </action>
+  <action name="actionTextFile">
+   <property name="text">
+    <string>Text File</string>
+   </property>
+  </action>
+  <action name="actionOpenSettingsFile">
+   <property name="text">
+    <string>Open Settings File</string>
+   </property>
+  </action>
+  <action name="actionCommentsBar">
+   <property name="text">
+    <string>Comments Bar</string>
+   </property>
+  </action>
+  <action name="actionPreviousPage">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/angle-circle-left-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Previous Page</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionNextPage">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/angle-circle-right-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Next Page</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/zoom-in-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/zoom-out-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionRotatePageClockwise">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/clockwise-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Page Clockwise</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionRotatePageAntiClockwise">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/uxwings Icons/anti-clockwise-icon.png</normaloff>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Page Anti Clockwise</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

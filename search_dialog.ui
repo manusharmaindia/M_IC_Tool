@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SearchDialog</class>
+ <widget class="QDialog" name="SearchDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Search Text</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icons/search-icon.png</normaloff>Icons/search-icon.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="search_input">
+     <property name="placeholderText">
+      <string>Enter text to search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="similar_search_input">
+     <property name="placeholderText">
+      <string>Similar Search Terms</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="search_button">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="case_sensitive_checkbox">
+     <property name="text">
+      <string>Case Sensitive</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="search_results"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
